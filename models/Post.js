@@ -1,26 +1,26 @@
 const mongoose = require('mongoose');
 
 const postSchema = mongoose.Schema({
-    body: string,
-    username: string,
-    createdAt: string,
+    body: String,
+    username: String,
+    createdAt: String,
     comments: [
         {
-            username: string,
-            createdAt: string,
-            body: string
+            username: String,
+            createdAt: String,
+            body: String
         }
     ],
 
     likes: [
         {
-            username: string,
-            createdAt: string,
+            username: String,
+            createdAt: String,
         }
     ],
 
     user: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'users'
     }
 });
