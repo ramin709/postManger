@@ -4,7 +4,7 @@ const { connectionLink } = require('./config.js');
 const {typeDefs} = require('./graphql/typeDefs.js')
 const {resolvers} = require('./graphql/resolvers/index.js')
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ typeDefs, resolvers , context : ({req}) => ({req}) });
 
 mongoose.connect(connectionLink, { useNewUrlParser: true }).then(res => {
     console.log('connected to the database');
