@@ -11,6 +11,7 @@ const typeDefs = gql`
     }
 
     type Comment {
+        id: ID!
         username: String!
         createdAt: String!
         body: String!
@@ -53,6 +54,7 @@ const typeDefs = gql`
         deletePost(postId: ID!) : String!
         createComment(postId: ID! , body: String!) : Post!
         deleteComment(postId: ID! , commentId: ID!) : Post!
+        like(postId: ID!) : Post!
     }
 `;
 
