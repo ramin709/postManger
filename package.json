@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ramin709/postManger#readme",
   "dependencies": {
+    "@apollo/client": "^3.6.9",
     "apollo-server": "^3.10.0",
     "bcrypt": "^5.0.1",
     "graphql": "^16.5.0",

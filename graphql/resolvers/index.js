@@ -4,6 +4,12 @@ const commentsResolver = require('./comments.js');
 
 module.exports = {
     resolvers: {
+
+        Post: {
+            likesCount: (parent) => parent.likes.length,
+            commentsCount: (parent) => parent.comments.length 
+        },
+
         Query: {
             ...postsResolver.Query
         },
